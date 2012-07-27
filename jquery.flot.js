@@ -734,6 +734,9 @@
 
             var c = document.createElement('canvas');
             c.className = cls;
+            // Creates id for canvas.. this is neccesary if you want to transform the canvas to an image
+            // and then export to something like PDF. 
+            c.id = 'canvas'+cls;
 
             if (!c.getContext) // excanvas hack
                 c = window.G_vmlCanvasManager.initElement(c);
